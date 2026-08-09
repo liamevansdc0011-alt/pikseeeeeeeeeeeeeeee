@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gmail Mail Sender</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <main class="container">
+
+    <section id="login-section" class="card">
+      <h1>Dashboard Login</h1>
+
+      <form id="login-form">
+        <label for="login-password">Dashboard Password</label>
+
+        <input
+          id="login-password"
+          type="password"
+          autocomplete="current-password"
+          required
+        >
+
+        <button type="submit">Login</button>
+
+        <p id="login-message" class="message"></p>
+      </form>
+    </section>
+
+    <section id="dashboard-section" class="card hidden">
+
+      <div class="header">
+        <h1>Gmail Mail Sender</h1>
+        <button id="logout-button" type="button" class="secondary">
+          Logout
+        </button>
+      </div>
+
+      <form id="mail-form">
+
+        <label for="sender-name">Sender Name</label>
+        <input
+          id="sender-name"
+          type="text"
+          placeholder="Your name"
+          required
+        >
+
+        <label for="gmail">Gmail Address</label>
+        <input
+          id="gmail"
+          type="email"
+          placeholder="you@gmail.com"
+          required
+        >
+
+        <label for="app-password">Gmail App Password</label>
+        <input
+          id="app-password"
+          type="password"
+          placeholder="Gmail App Password"
+          required
+        >
+
+        <button id="verify-button" type="button" class="secondary">
+          Verify Gmail
+        </button>
+
+        <p id="verify-message" class="message"></p>
+
+        <label for="subject">Subject</label>
+        <input
+          id="subject"
+          type="text"
+          placeholder="Email subject"
+          required
+        >
+
+        <label for="message-body">Message</label>
+        <textarea
+          id="message-body"
+          rows="10"
+          placeholder="Write your email..."
+          required
+        ></textarea>
+
+        <label for="recipients">Recipients</label>
+        <textarea
+          id="recipients"
+          rows="8"
+          placeholder="one@example.com&#10;two@example.com"
+          required
+        ></textarea>
+
+        <p id="recipient-count">0 valid recipients</p>
+
+        <button id="send-button" type="submit">
+          Send Emails
+        </button>
+
+        <p id="send-message" class="message"></p>
+
+      </form>
+
+      <div id="results"></div>
+
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
